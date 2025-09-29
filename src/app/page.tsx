@@ -96,15 +96,15 @@ export default function HomePage() {
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600">15+</div>
+                <div className="text-3xl font-bold text-blue-600">5+</div>
                 <div className="text-sm text-gray-600">Лет опыта команды</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-600">99.9%</div>
+                <div className="text-3xl font-bold text-green-600">98%</div>
                 <div className="text-sm text-gray-600">Время работы</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-600">24/7</div>
+                <div className="text-3xl font-bold text-purple-600">12ч</div>
                 <div className="text-sm text-gray-600">Поддержка</div>
               </div>
               <div className="text-center">
@@ -373,7 +373,7 @@ export default function HomePage() {
                   Готовы начать управлять своим бизнесом эффективнее?
                 </h2>
                 <p className="text-xl opacity-90">
-                  Присоединяйтесь к тысячам компаний, которые уже используют нашу систему
+                  Станьте одним из первых клиентов нашего стартапа и получите персональный подход
                 </p>
               </div>
               
@@ -488,7 +488,7 @@ export default function HomePage() {
                     </div>
                     <div>
                       <h4 className="text-xl font-semibold mb-2">Экспертная поддержка</h4>
-                      <p className="opacity-90">Консультации от специалистов с 15+ летним опытом</p>
+                      <p className="opacity-90">Консультации от специалистов с 5+ летним опытом</p>
                     </div>
                   </div>
                   

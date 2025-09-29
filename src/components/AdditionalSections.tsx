@@ -131,7 +131,7 @@ export const PricingSection = () => (
             </li>
             <li className="flex items-center">
               <CheckCircle className="h-5 w-5 text-green-500 mr-3" />
-              <span>24/7 телефонная поддержка</span>
+              <span>Рабочие часы поддержка</span>
             </li>
           </ul>
           <Link 
@@ -366,7 +366,7 @@ export const FinalCTASection = () => (
         Готовы трансформировать свой бизнес?
       </h2>
       <p className="text-xl text-blue-100 mb-8">
-        Присоединяйтесь к тысячам компаний, которые уже увеличили прибыль с Shindong Efficiency
+        Станьте одним из первых клиентов и получите персональный подход к вашему проекту
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <Link 

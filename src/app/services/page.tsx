@@ -176,9 +176,9 @@ export default function ServicesPage() {
         'Микросервисная архитектура'
       ],
       stats: {
-        projects: '50+',
-        clients: '30+',
-        uptime: '99.9%'
+        projects: '10+',
+        clients: '8+',
+        uptime: '98%'
       }
     },
     {
@@ -196,9 +196,9 @@ export default function ServicesPage() {
         'Аналитика процессов'
       ],
       stats: {
-        processes: '200+',
-        efficiency: '+40%',
-        timeSaved: '15ч/день'
+        processes: '50+',
+        efficiency: '+25%',
+        timeSaved: '8ч/день'
       }
     },
     {
@@ -216,9 +216,9 @@ export default function ServicesPage() {
         'Обучение команды'
       ],
       stats: {
-        consultations: '100+',
-        companies: '50+',
-        satisfaction: '95%'
+        consultations: '25+',
+        companies: '15+',
+        satisfaction: '90%'
       }
     },
     {
@@ -236,9 +236,9 @@ export default function ServicesPage() {
         'Производительность'
       ],
       stats: {
-        responseTime: '<2ч',
-        availability: '99.9%',
-        issues: '<1%'
+        responseTime: '<4ч',
+        availability: '98%',
+        issues: '<3%'
       }
     }
   ]
@@ -268,10 +268,10 @@ export default function ServicesPage() {
   ]
 
   const stats = [
-    { label: 'Проектов завершено', value: '50+', icon: Target },
-    { label: 'Клиентов довольны', value: '95%', icon: Heart },
-    { label: 'Время работы', value: '99.9%', icon: Clock },
-    { label: 'Лет опыта', value: '15+', icon: Award }
+    { label: 'Проектов завершено', value: '10+', icon: Target },
+    { label: 'Клиентов довольны', value: '90%', icon: Heart },
+    { label: 'Время работы', value: '98%', icon: Clock },
+    { label: 'Лет опыта', value: '5+', icon: Award }
   ]
 
   return (

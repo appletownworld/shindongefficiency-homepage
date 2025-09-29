@@ -19,7 +19,7 @@ export default function AboutPage() {
     {
       name: "Алексей Иванов",
       position: "CEO & Основатель",
-      experience: "15+ лет в ERP",
+      experience: "5+ лет в ИТ",
       avatar: "АИ"
     },
     {
@@ -71,22 +71,22 @@ export default function AboutPage() {
 
   const achievements = [
     {
-      number: "10,000+",
+      number: "10+",
       label: "Активных клиентов",
       icon: Users
     },
     {
-      number: "15+",
-      label: "Лет на рынке",
+      number: "1",
+      label: "Год на рынке",
       icon: Award
     },
     {
-      number: "99.9%",
+      number: "98%",
       label: "Время работы",
       icon: TrendingUp
     },
     {
-      number: "50+",
+      number: "5+",
       label: "Сотрудников",
       icon: Globe
     }
