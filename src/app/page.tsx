@@ -85,19 +85,19 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Trust indicators */}
+        {/* Innovation indicators */}
         <section className="py-12 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-8">
               <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
-                <Star className="h-4 w-4 mr-2" />
-                Нам доверяют тысячи компаний
+                <Zap className="h-4 w-4 mr-2" />
+                Инновационные решения для современного бизнеса
               </div>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-600">10,000+</div>
-                <div className="text-sm text-gray-600">Активных компаний</div>
+                <div className="text-3xl font-bold text-blue-600">15+</div>
+                <div className="text-sm text-gray-600">Лет опыта команды</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-600">99.9%</div>
@@ -108,8 +108,81 @@ export default function HomePage() {
                 <div className="text-sm text-gray-600">Поддержка</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-orange-600">40%</div>
-                <div className="text-sm text-gray-600">Рост прибыли</div>
+                <div className="text-3xl font-bold text-orange-600">2024</div>
+                <div className="text-sm text-gray-600">Год запуска</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Startup Advantages */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Почему выбирают инновационные решения
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Современные технологии, персональный подход и гибкость в развитии
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200">
+                <div className="bg-blue-600 p-4 rounded-full w-fit mx-auto mb-6">
+                  <Zap className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Современные технологии</h3>
+                <p className="text-gray-600">
+                  Используем самые передовые технологии и методологии разработки. 
+                  Никакого устаревшего кода или legacy-систем.
+                </p>
+              </div>
+
+              <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-green-50 to-green-100 border border-green-200">
+                <div className="bg-green-600 p-4 rounded-full w-fit mx-auto mb-6">
+                  <Users className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Персональный подход</h3>
+                <p className="text-gray-600">
+                  Каждый клиент получает индивидуальное внимание. 
+                  Мы адаптируем решение под ваши конкретные потребности.
+                </p>
+              </div>
+
+              <div className="text-center p-8 rounded-2xl bg-gradient-to-br from-purple-50 to-purple-100 border border-purple-200">
+                <div className="bg-purple-600 p-4 rounded-full w-fit mx-auto mb-6">
+                  <TrendingUp className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Быстрое развитие</h3>
+                <p className="text-gray-600">
+                  Гибкая архитектура позволяет быстро добавлять новые функции 
+                  и адаптироваться к изменениям в вашем бизнесе.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-16 text-center">
+              <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
+                <h3 className="text-2xl font-bold mb-4">Станьте частью инновационного будущего</h3>
+                <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
+                  Присоединяйтесь к компаниям, которые выбирают современные решения 
+                  для эффективного управления бизнесом
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link 
+                    href="/demo" 
+                    className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  >
+                    Посмотреть демо
+                  </Link>
+                  <Link 
+                    href="/contact" 
+                    className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                  >
+                    Обсудить проект
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
