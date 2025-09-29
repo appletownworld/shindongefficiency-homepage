@@ -539,7 +539,6 @@ export default function HomePage() {
               <h3 className="text-lg font-semibold mb-4">Продукт</h3>
               <ul className="space-y-2 text-gray-400">
                 <li><Link href="#features" className="hover:text-white transition-colors">Возможности</Link></li>
-                <li><Link href="#pricing" className="hover:text-white transition-colors">Тарифы</Link></li>
                 <li><Link href="#versions" className="hover:text-white transition-colors">Версии</Link></li>
                 <li><Link href="/demo" className="hover:text-white transition-colors">Демо</Link></li>
               </ul>
