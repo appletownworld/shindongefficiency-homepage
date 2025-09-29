@@ -371,7 +371,7 @@ export default function AboutPage() {
               </h3>
               <div className="space-y-4">
                 <div className="flex justify-between items-center p-4 bg-green-50 rounded-lg">
-                  <span className="font-medium">Москва</span>
+                  <span className="font-medium">Асан, Южная Корея</span>
                   <span className="text-green-600 font-semibold">Головной офис</span>
                 </div>
                 <div className="flex justify-between items-center p-4 bg-blue-50 rounded-lg">

@@ -186,8 +186,9 @@ export default function ContactPage() {
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1">Адрес</h4>
                       <p className="text-gray-600">
-                        Москва, ул. Тверская, 12<br />
-                        БЦ "Центральный", офис 1501
+                        Columbus Knowledge Industry Center<br />
+                        10th Floor, 16 Yongmeori-gil, Tangjeong-myeon<br />
+                        Asan-si, Chungcheongnam-do, South Korea
                       </p>
                     </div>
                   </div>
@@ -199,8 +200,8 @@ export default function ContactPage() {
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1">Телефон</h4>
                       <p className="text-gray-600">
-                        +7 (800) 123-45-67<br />
-                        +7 (495) 123-45-67
+                        +82-41-123-4567<br />
+                        +82-2-123-4567
                       </p>
                     </div>
                   </div>
@@ -271,7 +272,7 @@ export default function ContactPage() {
               Наши офисы
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Мы работаем по всей России и готовы помочь вам в любом городе
+              Мы работаем по всему миру и готовы помочь вам в любой стране
             </p>
           </div>
 
@@ -280,13 +281,13 @@ export default function ContactPage() {
               <div className="bg-green-100 p-3 rounded-lg w-fit mb-4">
                 <MapPin className="h-6 w-6 text-green-600" />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Москва</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Асан, Южная Корея</h3>
               <p className="text-gray-600 text-sm mb-2">
                 Головной офис
               </p>
               <p className="text-gray-500 text-sm">
-                ул. Тверская, 12<br />
-                БЦ "Центральный"
+                Columbus Knowledge Industry Center<br />
+                10th Floor, 16 Yongmeori-gil
               </p>
             </div>
 
@@ -294,13 +295,13 @@ export default function ContactPage() {
               <div className="bg-blue-100 p-3 rounded-lg w-fit mb-4">
                 <MapPin className="h-6 w-6 text-blue-600" />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Санкт-Петербург</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Сеул, Южная Корея</h3>
               <p className="text-gray-600 text-sm mb-2">
-                Филиал
+                Представительство
               </p>
               <p className="text-gray-500 text-sm">
-                Невский пр., 28<br />
-                БЦ "Невский"
+                Gangnam-gu, Seoul<br />
+                Business Center
               </p>
             </div>
 
@@ -308,13 +309,13 @@ export default function ContactPage() {
               <div className="bg-purple-100 p-3 rounded-lg w-fit mb-4">
                 <MapPin className="h-6 w-6 text-purple-600" />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Екатеринбург</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Москва, Россия</h3>
               <p className="text-gray-600 text-sm mb-2">
-                Филиал
+                Представительство
               </p>
               <p className="text-gray-500 text-sm">
-                ул. Ленина, 5<br />
-                БЦ "Урал"
+                Business District<br />
+                Moscow, Russia
               </p>
             </div>
 
@@ -322,13 +323,13 @@ export default function ContactPage() {
               <div className="bg-orange-100 p-3 rounded-lg w-fit mb-4">
                 <MapPin className="h-6 w-6 text-orange-600" />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Новосибирск</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Сингапур</h3>
               <p className="text-gray-600 text-sm mb-2">
                 Представительство
               </p>
               <p className="text-gray-500 text-sm">
-                ул. Красный пр., 1<br />
-                БЦ "Сибирь"
+                Marina Bay<br />
+                Singapore
               </p>
             </div>
           </div>
