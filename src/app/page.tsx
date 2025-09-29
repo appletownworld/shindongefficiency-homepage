@@ -520,7 +520,7 @@ export default function HomePage() {
                 <span className="ml-2 text-xl font-bold">Shindong Efficiency</span>
               </div>
               <p className="text-gray-400 mb-4">
-                Современная ERP-система для автоматизации бизнес-процессов и роста прибыли.
+                Упрощаем жизнь людей и бизнес-процессы, создавая простые, надёжные и доступные ИТ-решения.
               </p>
               <div className="flex space-x-4">
                 <div className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center">
