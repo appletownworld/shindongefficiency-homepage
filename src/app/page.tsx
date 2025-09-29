@@ -559,7 +559,8 @@ export default function HomePage() {
               <h3 className="text-lg font-semibold mb-4">Контакты</h3>
               <ul className="space-y-2 text-gray-400">
                 <li>📧 support@shindongefficiency.com</li>
-                <li>📞 +82-41-123-4567</li>
+                <li>📞 +82-10-6385-8808</li>
+                <li>📠 +82-50-4242-5576</li>
                 <li>💬 Онлайн чат 24/7</li>
                 <li>🏢 Асан, Южная Корея, Columbus Knowledge Industry Center</li>
               </ul>

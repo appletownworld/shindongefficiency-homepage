@@ -7,7 +7,8 @@ import {
   Mail,
   Clock,
   MessageCircle,
-  Send
+  Send,
+  FileText
 } from 'lucide-react'
 
 export default function ContactPage() {
@@ -200,8 +201,19 @@ export default function ContactPage() {
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1">Телефон</h4>
                       <p className="text-gray-600">
-                        +82-41-123-4567<br />
-                        +82-2-123-4567
+                        +82-10-6385-8808
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start">
+                    <div className="bg-yellow-100 p-3 rounded-lg mr-4">
+                      <FileText className="h-6 w-6 text-yellow-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 mb-1">Факс</h4>
+                      <p className="text-gray-600">
+                        +82-50-4242-5576
                       </p>
                     </div>
                   </div>
@@ -213,7 +225,6 @@ export default function ContactPage() {
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
                       <p className="text-gray-600">
-                        info@shindongefficiency.com<br />
                         support@shindongefficiency.com
                       </p>
                     </div>
