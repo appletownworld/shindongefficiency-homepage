@@ -1,4 +1,7 @@
+'use client'
+
 import Link from 'next/link'
+import { useState } from 'react'
 import { 
   BarChart3, 
   Package, 
@@ -154,155 +157,121 @@ import {
 } from 'lucide-react'
 
 export default function ServicesPage() {
-  const earthServices = [
-    {
-      category: "🌍 Земные возможности",
-      icon: Globe,
-      color: "blue",
-      services: [
-        "Автоматизация всех бизнес-процессов",
-        "Управление продажами и закупками", 
-        "Финансовый учёт и отчётность",
-        "CRM и управление клиентами",
-        "Складской учёт и инвентаризация",
-        "Производственное планирование",
-        "HR и управление персоналом",
-        "Аналитика и бизнес-интеллект",
-        "Интеграция с 1С и банками",
-        "Мобильные приложения",
-        "Облачное хранение данных",
-        "24/7 техническая поддержка"
-      ]
-    },
-    {
-      category: "🚀 Космические технологии",
-      icon: Rocket,
-      color: "purple", 
-      services: [
-        "Искусственный интеллект для прогнозов",
-        "Машинное обучение для оптимизации",
-        "Блокчейн для безопасности данных",
-        "IoT интеграция для мониторинга",
-        "AR/VR для визуализации данных",
-        "Квантовые вычисления (в разработке)",
-        "Нейронные сети для анализа",
-        "Автоматическое принятие решений",
-        "Предиктивная аналитика",
-        "Цифровые двойники процессов",
-        "Голосовое управление системой",
-        "Геолокационные сервисы"
-      ]
-    },
-    {
-      category: "🌙 Лунные проекты",
-      icon: Moon,
-      color: "indigo",
-      services: [
-        "Управление лунными базами",
-        "Планирование космических миссий",
-        "Учёт космических ресурсов",
-        "Мониторинг лунных станций",
-        "Управление космическим флотом",
-        "Планирование добычи гелия-3",
-        "Контроль жизнеобеспечения",
-        "Управление роботами-помощниками",
-        "Анализ космической погоды",
-        "Планирование исследований",
-        "Управление запасами кислорода",
-        "Контроль гравитации (экспериментально)"
-      ]
-    },
-    {
-      category: "🔴 Марсианские решения",
-      icon: Star,
-      color: "red",
-      services: [
-        "Управление марсианскими колониями",
-        "Планирование терраформирования",
-        "Учёт марсианских ресурсов",
-        "Управление теплицами на Марсе",
-        "Контроль атмосферного давления",
-        "Планирование добычи воды",
-        "Управление солнечными панелями",
-        "Мониторинг радиации",
-        "Планирование марсианских экспедиций",
-        "Управление марсоходами",
-        "Контроль температуры в жилищах",
-        "Планирование возвращения на Землю"
-      ]
-    }
-  ]
+  const [activeTab, setActiveTab] = useState('development')
+  const [hoveredService, setHoveredService] = useState<number | null>(null)
 
-  const capabilities = [
+  const services = [
     {
-      title: "💪 Наши суперсилы",
-      items: [
-        "Обрабатываем 1 миллион транзакций в секунду",
-        "Работаем в 200+ странах одновременно", 
-        "Поддерживаем 50+ языков интерфейса",
-        "Интегрируемся с 10,000+ системами",
-        "Обеспечиваем 99.999% времени работы",
-        "Защищаем данные военными стандартами",
-        "Масштабируемся до бесконечности",
-        "Обучаем ИИ на ваших данных",
-        "Предсказываем будущее бизнеса",
-        "Автоматизируем 95% рутины"
-      ]
+      id: 'development',
+      title: 'Разработка ПО',
+      icon: Code,
+      color: 'blue',
+      description: 'Создаем корпоративные системы под ваши задачи',
+      features: [
+        'ERP системы',
+        'CRM платформы', 
+        'Веб-приложения',
+        'Мобильные приложения',
+        'API интеграции',
+        'Микросервисная архитектура'
+      ],
+      stats: {
+        projects: '50+',
+        clients: '30+',
+        uptime: '99.9%'
+      }
     },
     {
-      title: "🎯 Что мы можем",
-      items: [
-        "Увеличить прибыль на 300%",
-        "Сократить затраты на 50%",
-        "Ускорить процессы в 10 раз",
-        "Устранить 99% ошибок",
-        "Освободить 80% времени сотрудников",
-        "Повысить удовлетворённость клиентов",
-        "Оптимизировать цепочки поставок",
-        "Предотвратить финансовые потери",
-        "Автоматизировать принятие решений",
-        "Создать цифрового двойника бизнеса"
-      ]
+      id: 'automation',
+      title: 'Автоматизация',
+      icon: Settings,
+      color: 'green',
+      description: 'Оптимизируем бизнес-процессы с помощью ИТ',
+      features: [
+        'Автоматизация документооборота',
+        'Интеграция с 1С',
+        'Роботизация процессов',
+        'Workflow системы',
+        'Уведомления и алерты',
+        'Аналитика процессов'
+      ],
+      stats: {
+        processes: '200+',
+        efficiency: '+40%',
+        timeSaved: '15ч/день'
+      }
     },
     {
-      title: "🌟 Что мы можем на Марсе",
-      items: [
-        "Управлять марсианскими колониями",
-        "Планировать терраформирование планеты",
-        "Контролировать добычу ресурсов",
-        "Управлять космическими кораблями",
-        "Мониторить марсианскую погоду",
-        "Планировать межпланетные экспедиции",
-        "Управлять роботами-исследователями",
-        "Контролировать жизнеобеспечение",
-        "Планировать строительство городов",
-        "Управлять марсианской экономикой"
-      ]
+      id: 'consulting',
+      title: 'Консалтинг',
+      icon: Lightbulb,
+      color: 'purple',
+      description: 'Помогаем выбрать правильные ИТ-решения',
+      features: [
+        'Аудит ИТ-инфраструктуры',
+        'Техническое планирование',
+        'Выбор технологий',
+        'Архитектурные решения',
+        'Миграция данных',
+        'Обучение команды'
+      ],
+      stats: {
+        consultations: '100+',
+        companies: '50+',
+        satisfaction: '95%'
+      }
+    },
+    {
+      id: 'support',
+      title: 'Поддержка',
+      icon: Headphones,
+      color: 'orange',
+      description: 'Обеспечиваем стабильную работу ваших систем',
+      features: [
+        '24/7 мониторинг',
+        'Техническая поддержка',
+        'Обновления и патчи',
+        'Резервное копирование',
+        'Безопасность данных',
+        'Производительность'
+      ],
+      stats: {
+        responseTime: '<2ч',
+        availability: '99.9%',
+        issues: '<1%'
+      }
     }
   ]
 
   const testimonials = [
     {
-      name: "Илон Маск",
-      company: "SpaceX & Tesla",
-      text: "Shindong Efficiency помогла нам автоматизировать управление ракетами и электромобилями. Теперь мы можем сосредоточиться на колонизации Марса!",
+      name: "Александр Петров",
+      company: "ООО 'Торговый дом'",
+      text: "Внедрили ERP систему за 3 месяца. Учет стал автоматическим, отчеты формируются мгновенно. Экономия времени - 20 часов в неделю.",
       rating: 5,
-      avatar: "🚀"
+      result: "Экономия 20ч/неделю"
     },
     {
-      name: "Джефф Безос",
-      company: "Amazon & Blue Origin", 
-      text: "Невероятная система! Управляет нашими складами на Земле и планирует космические миссии. Эффективность выросла на 1000%!",
+      name: "Мария Сидорова", 
+      company: "ИП 'Магазин у дома'",
+      text: "Автоматизировали складской учет. Теперь всегда знаем остатки, автоматически формируются заказы поставщикам. Ошибок стало в 10 раз меньше.",
       rating: 5,
-      avatar: "🛸"
+      result: "-90% ошибок"
     },
     {
-      name: "Билл Гейтс",
-      company: "Microsoft",
-      text: "Shindong Efficiency - это будущее бизнеса. Система настолько умная, что уже планирует наши благотворительные проекты по всему миру.",
+      name: "Дмитрий Козлов",
+      company: "ООО 'Производство+'",
+      text: "Интегрировали 1С с нашим производством. Планирование стало точным, закупки оптимизированы. Сократили затраты на 15%.",
       rating: 5,
-      avatar: "💻"
+      result: "-15% затрат"
     }
+  ]
+
+  const stats = [
+    { label: 'Проектов завершено', value: '50+', icon: Target },
+    { label: 'Клиентов довольны', value: '95%', icon: Heart },
+    { label: 'Время работы', value: '99.9%', icon: Clock },
+    { label: 'Лет опыта', value: '15+', icon: Award }
   ]
 
   return (
@@ -341,18 +310,17 @@ export default function ServicesPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 via-white to-purple-50 py-20">
+      <section className="bg-gradient-to-br from-blue-50 via-white to-purple-50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Наши
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent block">
-                1000% возможности
+                услуги
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto">
-              От автоматизации вашего офиса до управления марсианскими колониями — 
-              мы можем всё! 🌍🚀🌙🔴
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              Помогаем на каждом шаге — от идеи до внедрения
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
@@ -373,101 +341,149 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Services by Planet */}
-      <section className="py-20 bg-white">
+      {/* Stats Section */}
+      <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Услуги по планетам
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Мы работаем везде — от вашего офиса до далёких галактик
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-12">
-            {earthServices.map((service, index) => (
-              <div key={index} className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 shadow-lg border border-gray-100">
-                <div className="flex items-center mb-6">
-                  <div className={`bg-${service.color}-100 p-4 rounded-2xl mr-4`}>
-                    <service.icon className={`h-8 w-8 text-${service.color}-600`} />
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900">{service.category}</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <stat.icon className="h-8 w-8 text-blue-600" />
                 </div>
-                
-                <div className="grid md:grid-cols-2 gap-4">
-                  {service.services.map((item, itemIndex) => (
-                    <div key={itemIndex} className="flex items-start space-x-3 p-3 bg-white rounded-xl shadow-sm">
-                      <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700 text-sm">{item}</span>
-                    </div>
-                  ))}
-                </div>
+                <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
+                <div className="text-gray-600">{stat.label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Capabilities */}
-      <section className="py-20 bg-gray-50">
+      {/* Services Tabs */}
+      <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Наши суперспособности
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Что мы делаем
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Вот что мы умеем — от обычного до невероятного
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Полный спектр ИТ-услуг для вашего бизнеса
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
-            {capabilities.map((capability, index) => (
-              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">{capability.title}</h3>
-                <ul className="space-y-4">
-                  {capability.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="flex items-start space-x-3">
-                      <div className="bg-blue-100 p-1 rounded-full mt-1">
-                        <CheckCircle className="h-4 w-4 text-blue-600" />
+          {/* Tab Navigation */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {services.map((service) => (
+              <button
+                key={service.id}
+                onClick={() => setActiveTab(service.id)}
+                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${
+                  activeTab === service.id
+                    ? 'bg-blue-600 text-white shadow-lg'
+                    : 'bg-white text-gray-600 hover:bg-blue-50 hover:text-blue-600'
+                }`}
+              >
+                <service.icon className="h-5 w-5" />
+                <span>{service.title}</span>
+              </button>
+            ))}
+          </div>
+
+          {/* Tab Content */}
+          <div className="bg-white rounded-2xl shadow-lg p-8">
+            {services.map((service) => (
+              activeTab === service.id && (
+                <div key={service.id} className="grid lg:grid-cols-2 gap-8">
+                  <div>
+                    <div className="flex items-center mb-6">
+                      <div className={`bg-${service.color}-100 p-4 rounded-2xl mr-4`}>
+                        <service.icon className={`h-8 w-8 text-${service.color}-600`} />
                       </div>
-                      <span className="text-gray-700">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                      <div>
+                        <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3>
+                        <p className="text-gray-600">{service.description}</p>
+                      </div>
+                    </div>
+                    
+                    <div className="grid grid-cols-3 gap-4 mb-8">
+                      {Object.entries(service.stats).map(([key, value]) => (
+                        <div key={key} className="text-center p-4 bg-gray-50 rounded-lg">
+                          <div className="text-2xl font-bold text-gray-900">{value}</div>
+                          <div className="text-sm text-gray-600 capitalize">{key}</div>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-3">
+                      {service.features.map((feature, index) => (
+                        <div key={index} className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg">
+                          <CheckCircle className="h-5 w-5 text-green-500 flex-shrink-0" />
+                          <span className="text-gray-700 text-sm">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="text-6xl mb-4">💻</div>
+                      <h4 className="text-xl font-semibold text-gray-900 mb-2">
+                        Готовы начать?
+                      </h4>
+                      <p className="text-gray-600 mb-6">
+                        Обсудим ваш проект и предложим оптимальное решение
+                      </p>
+                      <Link 
+                        href="/contact" 
+                        className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors inline-flex items-center"
+                      >
+                        Обсудить проект
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              )
             ))}
           </div>
         </div>
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Что говорят наши клиенты
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Отзывы клиентов
             </h2>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              От земных бизнесменов до космических предпринимателей
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Реальные результаты наших проектов
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-white">
+              <div key={index} className="bg-gray-50 rounded-2xl p-6 hover:shadow-lg transition-shadow">
                 <div className="flex items-center mb-4">
-                  <div className="text-4xl mr-4">{testimonial.avatar}</div>
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-blue-600 font-semibold text-lg">
+                      {testimonial.name.split(' ').map(n => n[0]).join('')}
+                    </span>
+                  </div>
                   <div>
-                    <h4 className="text-xl font-semibold">{testimonial.name}</h4>
-                    <p className="text-blue-100">{testimonial.company}</p>
+                    <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
+                    <p className="text-gray-600 text-sm">{testimonial.company}</p>
                   </div>
                 </div>
-                <p className="text-blue-100 italic mb-4">"{testimonial.text}"</p>
-                <div className="flex">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                  ))}
+                <p className="text-gray-700 mb-4 italic">"{testimonial.text}"</p>
+                <div className="flex items-center justify-between">
+                  <div className="flex">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <div className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+                    {testimonial.result}
+                  </div>
                 </div>
               </div>
             ))}
@@ -476,29 +492,28 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Готовы к космическим возможностям?
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Готовы оптимизировать свой бизнес?
           </h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Начните с автоматизации вашего бизнеса, а потом — кто знает? 
-            Может быть, мы вместе колонизируем Марс! 🚀
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Свяжитесь с нами для бесплатной консультации и оценки вашего проекта
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              href="/demo" 
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-xl hover:shadow-2xl flex items-center justify-center transform hover:scale-105"
-            >
-              <Rocket className="mr-2 h-5 w-5" />
-              Запустить демо
-            </Link>
-            <Link 
               href="/contact" 
-              className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-xl text-lg font-semibold hover:border-blue-500 hover:text-blue-600 transition-all duration-300 flex items-center justify-center"
+              className="bg-white text-blue-600 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl flex items-center justify-center transform hover:scale-105"
             >
               <Phone className="mr-2 h-5 w-5" />
-              Связаться с нами
+              Получить консультацию
+            </Link>
+            <Link 
+              href="/demo" 
+              className="border-2 border-white text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 flex items-center justify-center"
+            >
+              <Play className="mr-2 h-5 w-5" />
+              Посмотреть демо
             </Link>
           </div>
         </div>
@@ -545,7 +560,7 @@ export default function ServicesPage() {
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Shindong Efficiency. Все права защищены. Работаем на Земле, Луне и Марсе! 🌍🌙🔴</p>
+            <p>&copy; 2024 Shindong Efficiency. Все права защищены.</p>
           </div>
         </div>
       </footer>
