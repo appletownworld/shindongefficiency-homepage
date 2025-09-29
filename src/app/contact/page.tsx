@@ -22,13 +22,11 @@ export default function ContactPage() {
                 <BarChart3 className="h-8 w-8 text-white" />
               </div>
               <span className="ml-3 text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                ECount Pro
+                Shindong Efficiency
               </span>
             </Link>
             <nav className="hidden lg:flex space-x-8">
               <Link href="/features" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">Возможности</Link>
-              <Link href="/explore" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">Исследовать</Link>
-              <Link href="/pricing" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">Цены</Link>
               <Link href="/services" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">Услуги</Link>
               <Link href="/about" className="text-gray-600 hover:text-blue-600 font-medium transition-colors">О нас</Link>
             </nav>
@@ -40,10 +38,10 @@ export default function ContactPage() {
                 Войти
               </Link>
               <Link 
-                href="/register" 
+                href="/contact" 
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
-                Начать бесплатно
+                Связаться с нами
               </Link>
             </div>
           </div>
@@ -214,8 +212,8 @@ export default function ContactPage() {
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
                       <p className="text-gray-600">
-                        info@ecountpro.ru<br />
-                        support@ecountpro.ru
+                        info@shindongefficiency.com<br />
+                        support@shindongefficiency.com
                       </p>
                     </div>
                   </div>
@@ -352,14 +350,60 @@ export default function ContactPage() {
               Позвонить сейчас
             </button>
             <Link 
-              href="/register" 
+              href="/demo" 
               className="border-2 border-white text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 flex items-center justify-center"
             >
-              Начать бесплатно
+              Посмотреть демо
             </Link>
           </div>
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-4 gap-8">
+            <div>
+              <div className="flex items-center space-x-2 mb-4">
+                <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg">
+                  <BarChart3 className="h-6 w-6 text-white" />
+                </div>
+                <span className="text-xl font-bold">Shindong Efficiency</span>
+              </div>
+              <p className="text-gray-400">
+                Упрощаем жизнь людей и бизнес-процессы, создавая простые, надёжные и доступные ИТ-решения.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Продукт</h3>
+              <ul className="space-y-2 text-gray-400">
+                <li><Link href="/features" className="hover:text-white transition-colors">Возможности</Link></li>
+                <li><Link href="/demo" className="hover:text-white transition-colors">Демо</Link></li>
+                <li><Link href="/contact" className="hover:text-white transition-colors">Консультация</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Компания</h3>
+              <ul className="space-y-2 text-gray-400">
+                <li><Link href="/about" className="hover:text-white transition-colors">О нас</Link></li>
+                <li><Link href="/services" className="hover:text-white transition-colors">Услуги</Link></li>
+                <li><Link href="/contact" className="hover:text-white transition-colors">Контакты</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Поддержка</h3>
+              <ul className="space-y-2 text-gray-400">
+                <li><Link href="/help" className="hover:text-white transition-colors">Помощь</Link></li>
+                <li><Link href="/docs" className="hover:text-white transition-colors">Документация</Link></li>
+                <li><Link href="/status" className="hover:text-white transition-colors">Статус системы</Link></li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+            <p>&copy; 2024 Shindong Efficiency. Все права защищены.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }
