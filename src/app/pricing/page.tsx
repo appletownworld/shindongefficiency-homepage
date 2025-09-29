@@ -296,7 +296,7 @@ export default function PricingPage() {
               Нам доверяют
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Более 10,000 компаний уже используют ECount Pro
+              Более 10,000 компаний уже используют Shindong Efficiency
             </p>
           </div>
 

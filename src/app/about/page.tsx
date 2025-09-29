@@ -398,7 +398,7 @@ export default function AboutPage() {
             Готовы работать с нами?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Присоединяйтесь к тысячам компаний, которые уже доверяют ECount Pro
+            Присоединяйтесь к тысячам компаний, которые уже доверяют Shindong Efficiency
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 

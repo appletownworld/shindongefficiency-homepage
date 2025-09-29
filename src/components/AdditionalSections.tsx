@@ -240,7 +240,7 @@ export const TestimonialsSection = () => (
             ))}
           </div>
           <p className="text-gray-600 mb-6">
-            "ECount Pro помог нам увеличить эффективность на 40%. 
+            "Shindong Efficiency помог нам увеличить эффективность на 40%. 
             Теперь мы тратим меньше времени на рутину и больше на развитие бизнеса."
           </p>
           <div className="flex items-center">
@@ -366,7 +366,7 @@ export const FinalCTASection = () => (
         Готовы трансформировать свой бизнес?
       </h2>
       <p className="text-xl text-blue-100 mb-8">
-        Присоединяйтесь к тысячам компаний, которые уже увеличили прибыль с ECount Pro
+        Присоединяйтесь к тысячам компаний, которые уже увеличили прибыль с Shindong Efficiency
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <Link 

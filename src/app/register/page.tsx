@@ -72,7 +72,7 @@ export default function RegisterPage() {
           <div className="flex justify-center">
             <div className="flex items-center">
               <BarChart3 className="h-10 w-10 text-blue-600" />
-              <span className="ml-2 text-2xl font-bold text-gray-900">ECount Clone</span>
+              <span className="ml-2 text-2xl font-bold text-gray-900">Shindong Efficiency</span>
             </div>
           </div>
           <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">

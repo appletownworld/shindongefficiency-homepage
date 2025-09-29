@@ -70,7 +70,7 @@ export default function ExplorePage() {
       company: "ООО 'Альфа-Производство'",
       industry: "Производство",
       result: "Увеличение эффективности на 45%",
-      story: "Внедрение ECount Pro позволило автоматизировать производственные процессы и сократить время на планирование на 60%."
+      story: "Внедрение Shindong Efficiency позволило автоматизировать производственные процессы и сократить время на планирование на 60%."
     },
     {
       company: "ИП 'Бета-Торговля'",
@@ -143,7 +143,7 @@ export default function ExplorePage() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto">
-              Узнайте, как ECount Pro может трансформировать ваш бизнес. 
+              Узнайте, как Shindong Efficiency может трансформировать ваш бизнес. 
               Выберите удобный способ знакомства с системой
             </p>
           </div>
