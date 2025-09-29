@@ -37,6 +37,7 @@ import {
   Pause,
   Square
 } from 'lucide-react'
+import HeroSlider from '@/components/HeroSlider'
 
 export default function HomePage() {
   return (
@@ -76,62 +77,39 @@ export default function HomePage() {
         </div>
       </header>
 
-      {/* Hero Section */}
+      {/* Hero Slider Section */}
       <main>
-        <section className="relative bg-gradient-to-br from-blue-50 via-white to-purple-50 py-20 overflow-hidden">
-          <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <HeroSlider />
+          </div>
+        </section>
+
+        {/* Trust indicators */}
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
                 <Star className="h-4 w-4 mr-2" />
-                Простые решения для сложных задач
+                Нам доверяют тысячи компаний
               </div>
-              <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-                Упрощаем
-                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent block">
-                  вашу работу
-                </span>
-                каждый день
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Простые, надёжные и доступные ИТ-решения, которые снижают затраты, 
-                ускоряют работу и помогают масштабироваться. 
-                <strong className="text-gray-900">Автоматизируйте рутину</strong> и сосредоточьтесь на развитии бизнеса!
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <Link 
-                  href="/demo" 
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-xl hover:shadow-2xl flex items-center justify-center transform hover:scale-105"
-                >
-                  <Play className="mr-2 h-5 w-5" />
-                  Посмотреть демо
-                </Link>
-                <Link 
-                  href="/contact" 
-                  className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-xl text-lg font-semibold hover:border-blue-500 hover:text-blue-600 transition-all duration-300 flex items-center justify-center"
-                >
-                  Связаться с нами
-                </Link>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-600">10,000+</div>
+                <div className="text-sm text-gray-600">Активных компаний</div>
               </div>
-              
-              {/* Trust indicators */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600">10,000+</div>
-                  <div className="text-sm text-gray-600">Активных компаний</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-green-600">99.9%</div>
-                  <div className="text-sm text-gray-600">Время работы</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-600">24/7</div>
-                  <div className="text-sm text-gray-600">Поддержка</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-orange-600">40%</div>
-                  <div className="text-sm text-gray-600">Рост прибыли</div>
-                </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-green-600">99.9%</div>
+                <div className="text-sm text-gray-600">Время работы</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-purple-600">24/7</div>
+                <div className="text-sm text-gray-600">Поддержка</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-orange-600">40%</div>
+                <div className="text-sm text-gray-600">Рост прибыли</div>
               </div>
             </div>
           </div>
