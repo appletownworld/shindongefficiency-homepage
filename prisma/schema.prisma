@@ -1,0 +1,193 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Пользователи системы
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String
+  role      UserRole @default(USER)
+  companyId String?
+  company   Company? @relation(fields: [companyId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("users")
+}
+
+enum UserRole {
+  ADMIN
+  MANAGER
+  USER
+}
+
+// Компании
+model Company {
+  id          String   @id @default(cuid())
+  name        String
+  address     String?
+  phone       String?
+  email       String?
+  taxNumber   String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  users       User[]
+  customers   Customer[]
+  suppliers   Supplier[]
+  products    Product[]
+  sales       Sale[]
+  purchases   Purchase[]
+  inventory   Inventory[]
+
+  @@map("companies")
+}
+
+// Клиенты
+model Customer {
+  id        String   @id @default(cuid())
+  name      String
+  email     String?
+  phone     String?
+  address   String?
+  companyId String
+  company   Company  @relation(fields: [companyId], references: [id])
+  sales     Sale[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("customers")
+}
+
+// Поставщики
+model Supplier {
+  id        String   @id @default(cuid())
+  name      String
+  email     String?
+  phone     String?
+  address   String?
+  companyId String
+  company   Company  @relation(fields: [companyId], references: [id])
+  purchases Purchase[]
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("suppliers")
+}
+
+// Продукты/Товары
+model Product {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+  sku         String   @unique
+  price       Decimal  @db.Decimal(10, 2)
+  cost        Decimal  @db.Decimal(10, 2)
+  category    String?
+  companyId   String
+  company     Company  @relation(fields: [companyId], references: [id])
+  inventory   Inventory[]
+  saleItems   SaleItem[]
+  purchaseItems PurchaseItem[]
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("products")
+}
+
+// Инвентарь
+model Inventory {
+  id        String   @id @default(cuid())
+  productId String
+  product   Product  @relation(fields: [productId], references: [id])
+  quantity  Int      @default(0)
+  location  String?
+  companyId String
+  company   Company  @relation(fields: [companyId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("inventory")
+}
+
+// Продажи
+model Sale {
+  id         String   @id @default(cuid())
+  customerId String
+  customer   Customer @relation(fields: [customerId], references: [id])
+  total      Decimal  @db.Decimal(10, 2)
+  status     SaleStatus @default(PENDING)
+  companyId  String
+  company    Company  @relation(fields: [companyId], references: [id])
+  items      SaleItem[]
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@map("sales")
+}
+
+enum SaleStatus {
+  PENDING
+  COMPLETED
+  CANCELLED
+}
+
+// Элементы продажи
+model SaleItem {
+  id        String  @id @default(cuid())
+  saleId    String
+  sale      Sale    @relation(fields: [saleId], references: [id])
+  productId String
+  product   Product @relation(fields: [productId], references: [id])
+  quantity  Int
+  price     Decimal @db.Decimal(10, 2)
+  total     Decimal @db.Decimal(10, 2)
+
+  @@map("sale_items")
+}
+
+// Закупки
+model Purchase {
+  id         String   @id @default(cuid())
+  supplierId String
+  supplier   Supplier @relation(fields: [supplierId], references: [id])
+  total      Decimal  @db.Decimal(10, 2)
+  status     PurchaseStatus @default(PENDING)
+  companyId  String
+  company    Company  @relation(fields: [companyId], references: [id])
+  items      PurchaseItem[]
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@map("purchases")
+}
+
+enum PurchaseStatus {
+  PENDING
+  COMPLETED
+  CANCELLED
+}
+
+// Элементы закупки
+model PurchaseItem {
+  id        String  @id @default(cuid())
+  purchaseId String
+  purchase  Purchase @relation(fields: [purchaseId], references: [id])
+  productId String
+  product   Product @relation(fields: [productId], references: [id])
+  quantity  Int
+  price     Decimal @db.Decimal(10, 2)
+  total     Decimal @db.Decimal(10, 2)
+
+  @@map("purchase_items")
+}
