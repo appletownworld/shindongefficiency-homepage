@@ -1,6 +1,7 @@
 {
-  "name": "ecount-clone",
-  "version": "0.1.0",
+  "name": "shindongefficiency",
+  "version": "1.0.0",
+  "description": "Официальный сайт компании Shindong Efficiency - современные ИТ-решения для автоматизации бизнес-процессов",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
